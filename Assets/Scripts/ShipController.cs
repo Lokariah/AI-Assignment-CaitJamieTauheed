@@ -7,10 +7,10 @@ public class ShipController : MonoBehaviour
 {
 
     Vector3 momentum = Vector3.zero;
-    float acceleration = 1.25f;
-    float terminalVelocity = 5.0f;
+    float acceleration = 10.25f;
+    float terminalVelocity = 20.0f;
     float drag = 0.25f;
-    float turnSpeed = 3.0f;
+    float turnSpeed = 90.0f;
     float shootTimerMax = 0.5f;
     float shootTimer = 0.0f;
 
@@ -30,9 +30,9 @@ public class ShipController : MonoBehaviour
     {
         if (shootTimer > 0.0f) shootTimer -= Time.deltaTime;
 
-        momentum *= 0.95f;
+        momentum -= (momentum * 0.95f) * Time.deltaTime;
 
-        this.transform.position += momentum;
+        this.transform.position += momentum * Time.deltaTime;
 
         if(this.transform.position.x > screenRadius)
         {
@@ -58,7 +58,7 @@ public class ShipController : MonoBehaviour
         //if (momentum > terminalVelocity) momentum = terminalVelocity;
 
 
-        momentum += (this.transform.forward * acceleration) * Time.deltaTime;
+        momentum += (this.transform.forward * acceleration * Time.deltaTime);
 
        // this.transform.position += (this.transform.forward * acceleration) * Time.deltaTime;
         
@@ -69,11 +69,11 @@ public class ShipController : MonoBehaviour
         Vector3 zAxis = new Vector3( 0.0f, 0.0f, 1.0f );
         if (turningRight)
         {
-            this.transform.RotateAround(this.transform.position, zAxis, -turnSpeed);
+            this.transform.RotateAround(this.transform.position, zAxis, -turnSpeed * Time.deltaTime);
         }
         else
         {
-            this.transform.RotateAround(this.transform.position, zAxis, turnSpeed);
+            this.transform.RotateAround(this.transform.position, zAxis, turnSpeed * Time.deltaTime);
         }
     }
 
