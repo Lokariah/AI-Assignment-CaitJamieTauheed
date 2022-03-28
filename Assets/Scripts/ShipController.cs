@@ -93,4 +93,10 @@ public class ShipController : MonoBehaviour
     {
        if (other.tag != "Player") Destroy(this.gameObject);
     }
+
+    private void OnDestroy()
+    {
+        Application.Quit();
+        UnityEditor.EditorApplication.isPlaying = false;
+    }
 }

@@ -13,6 +13,8 @@ public class Drift : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        float newScale = Random.Range(1.0f, 3.0f);
+        this.transform.localScale *= newScale;
         Vector3 direction = new Vector3(Random.Range(-1.0f, 1.0f), Random.Range(-1.0f, 1.0f), 0.0f); //Sets the momentum of the asteroid
         float speed = Random.Range(2.5f, 10.0f);
         momentum = direction * speed;

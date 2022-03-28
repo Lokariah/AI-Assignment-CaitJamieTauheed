@@ -9,7 +9,7 @@ public class LaserDrift : MonoBehaviour
     int edge;
 
     float timeAlive = 0.0f;
-    float lifeTime = 5.0f;
+    float lifeTime = 2.5f;
     float screenRadius = 20.0f;
 
     // Start is called before the first frame update
