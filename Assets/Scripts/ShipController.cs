@@ -5,6 +5,7 @@ using UnityEngine;
 
 public class ShipController : MonoBehaviour
 {
+    public GameObject laserPrefab;
 
     Vector3 momentum = Vector3.zero;
     float acceleration = 10.25f;
@@ -22,7 +23,7 @@ public class ShipController : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        
+        gameObject.tag = "Player";
     }
 
     // Update is called once per frame
@@ -82,8 +83,14 @@ public class ShipController : MonoBehaviour
         if (shootTimer <= 0.0f)
         {
             //Add shoot code here
+            Instantiate(laserPrefab, this.transform.position, this.transform.rotation);
 
             shootTimer = shootTimerMax;
         }
+    }
+
+    private void OnTriggerEnter(Collider other)
+    {
+       if (other.tag != "Player") Destroy(this.gameObject);
     }
 }

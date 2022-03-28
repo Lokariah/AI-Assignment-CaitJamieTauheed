@@ -2,43 +2,31 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Drift : MonoBehaviour
+public class LaserDrift : MonoBehaviour
 {
-    
+
     Vector3 momentum;
     int edge;
 
+    float timeAlive = 0.0f;
+    float lifeTime = 5.0f;
     float screenRadius = 20.0f;
 
     // Start is called before the first frame update
     void Start()
     {
-        Vector3 direction = new Vector3(Random.Range(-1.0f, 1.0f), Random.Range(-1.0f, 1.0f), 0.0f); //Sets the momentum of the asteroid
-        float speed = Random.Range(2.5f, 10.0f);
-        momentum = direction * speed;
-        edge = (int)Random.Range(0.0f, 4.0f);
-
-        if (edge == 0) //Top
-        {
-            this.transform.position = new Vector3(Random.Range(-screenRadius, screenRadius), screenRadius, 15.0f);
-        }
-        else if (edge == 1) //Right
-        {
-            this.transform.position = new Vector3(screenRadius, Random.Range(-screenRadius, screenRadius), 15.0f);
-        }
-        else if (edge == 2) //Bottom
-        {
-            this.transform.position = new Vector3(Random.Range(-screenRadius, screenRadius), -screenRadius, 15.0f);
-        }
-        else if (edge == 3) //Left
-        {
-            this.transform.position = new Vector3(-screenRadius, Random.Range(-screenRadius, screenRadius), 15.0f);
-        }
+        this.transform.Rotate(Vector3.left, -90.0f);
+        gameObject.tag = "Player";
+        float speed = 15.0f;
+        momentum = this.transform.up * speed;
     }
 
     // Update is called once per frame
     void Update()
     {
+        timeAlive += Time.deltaTime;
+        if (timeAlive >= lifeTime) Destroy(this.gameObject);
+
         this.transform.position += momentum * Time.deltaTime;
 
         if (this.transform.position.x > screenRadius)
@@ -61,6 +49,10 @@ public class Drift : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        Destroy(this.gameObject);
+        if (other.tag != "Player")
+        {
+            Destroy(other.gameObject);
+            Destroy(this.gameObject);
+        }
     }
 }

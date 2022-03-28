@@ -30,5 +30,10 @@ public class UserInput : MonoBehaviour
         {
             shipModel.GetComponent<ShipController>().TurnRight(true);
         }
+
+        if (Input.GetKeyDown(KeyCode.Space))
+        {
+            shipModel.GetComponent<ShipController>().Shoot();
+        }
     }
 }
