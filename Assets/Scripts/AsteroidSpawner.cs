@@ -8,7 +8,7 @@ public class AsteroidSpawner : MonoBehaviour
     float time = 0.0f;
     float spawnDelay = 2.0f;
     float previousTimeMod;
-
+    
     // Start is called before the first frame update
     void Start()
     {
