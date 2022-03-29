@@ -11,8 +11,8 @@ public class ShipController : MonoBehaviour
     float acceleration = 10.25f;
     float terminalVelocity = 20.0f;
     float drag = 0.25f;
-    float turnSpeed = 90.0f;
-    float shootTimerMax = 0.5f;
+    float turnSpeed = 270.0f;
+    float shootTimerMax = 0.25f;
     float shootTimer = 0.0f;
 
     float screenRadius = 20.0f; //The distance from 0 to the edge of the screen.
