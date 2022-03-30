@@ -133,8 +133,9 @@ GameObject:
   m_Component:
   - component: {fileID: 39128307}
   - component: {fileID: 39128308}
+  - component: {fileID: 39128309}
   m_Layer: 0
-  m_Name: Asteroid Spawner
+  m_Name: Game Controller
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -168,6 +169,20 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   asteroidPrefab: {fileID: 6264938321373868475, guid: 4b4f22583693d7a45b48c9d1100e470d, type: 3}
+--- !u!114 &39128309
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 39128306}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 25ea3bb405df1bc40af1daef2811fd88, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  asteroidSpawner: {fileID: 39128306}
+  shipModel: {fileID: 471807453}
 --- !u!1 &471807453
 GameObject:
   m_ObjectHideFlags: 0
@@ -363,6 +378,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 375de2aa42867e64e9f9eff4eb5d6054, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  agentParameters:
+    maxStep: 0
+  hasUpgradedFromAgentParameters: 1
+  MaxStep: 0
+  gameController: {fileID: 39128306}
 --- !u!1 &705388902
 GameObject:
   m_ObjectHideFlags: 0

@@ -8,12 +8,13 @@ public class ShipController : MonoBehaviour
     public GameObject laserPrefab;
 
     Vector3 momentum = Vector3.zero;
-    float acceleration = 10.25f;
+    const float acceleration = 10.25f;
     // float terminalVelocity = 20.0f;
     // float drag = 0.25f;
     float turnSpeed = 270.0f;
     float shootTimerMax = 0.25f;
     float shootTimer = 0.0f;
+    bool isAlive = true;
 
     float screenRadius = 20.0f; //The distance from 0 to the edge of the screen.
     // float leniencyEdgeValue = 0.1f;
@@ -55,14 +56,7 @@ public class ShipController : MonoBehaviour
 
     public void Thrust()
     {
-        //if (momentum < terminalVelocity) momentum += acceleration * Time.deltaTime;
-        //if (momentum > terminalVelocity) momentum = terminalVelocity;
-
-
         momentum += (this.transform.forward * acceleration * Time.deltaTime);
-
-       // this.transform.position += (this.transform.forward * acceleration) * Time.deltaTime;
-        
     }
 
     public void TurnRight(bool turningRight)
@@ -91,12 +85,28 @@ public class ShipController : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-       if (other.tag != "Player") Destroy(this.gameObject);
+       if (other.tag != "Player")
+       {
+            isAlive = false;
+            Debug.Log("Ouch. I'm hit!");
+       }
     }
 
-    private void OnDestroy()
+
+    public void ResetShip()
     {
-        Application.Quit();
-        UnityEditor.EditorApplication.isPlaying = false;
+        momentum = Vector3.zero;
+        shootTimer = 0.0f;
+        isAlive = true;
+    }
+
+    public bool CheckIfAlive()
+    {
+        return isAlive;
+    }
+
+    public Vector3 GetShipPosition()
+    {
+        return
     }
 }

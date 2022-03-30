@@ -5,7 +5,6 @@ using UnityEngine;
 
 public class UserInput : MonoBehaviour
 {
-    //public ShipController ship; //May not need this. Can access the ship through the gameobject.
     public GameObject shipModel;
 
     // Start is called before the first frame update
