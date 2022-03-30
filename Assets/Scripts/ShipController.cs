@@ -9,14 +9,14 @@ public class ShipController : MonoBehaviour
 
     Vector3 momentum = Vector3.zero;
     float acceleration = 10.25f;
-    float terminalVelocity = 20.0f;
-    float drag = 0.25f;
+    // float terminalVelocity = 20.0f;
+    // float drag = 0.25f;
     float turnSpeed = 270.0f;
     float shootTimerMax = 0.25f;
     float shootTimer = 0.0f;
 
     float screenRadius = 20.0f; //The distance from 0 to the edge of the screen.
-    float leniencyEdgeValue = 0.1f;
+    // float leniencyEdgeValue = 0.1f;
 
 
 
