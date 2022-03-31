@@ -4,19 +4,27 @@ using UnityEngine;
 
 public class Drift : MonoBehaviour
 {
-    
+    public GameObject gameController;
+
+    const float SCALE_MAX = 4.0f;
+    const float SCALE_MIN = 0.5f;
+    const float SPEED_MAX = 10.0f;
+    const float SPEED_MIN = 2.5f;
+
+
     Vector3 momentum;
     int edge;
-
+    float scaleAmount = 0.0f;
     float screenRadius = 20.0f;
+    int baseScore = 100;
 
     // Start is called before the first frame update
     void Start()
     {
-        float newScale = Random.Range(1.0f, 3.0f);
-        this.transform.localScale *= newScale;
+        scaleAmount = Random.Range(SCALE_MIN, SCALE_MAX);
+        this.transform.localScale *= scaleAmount;
         Vector3 direction = new Vector3(Random.Range(-1.0f, 1.0f), Random.Range(-1.0f, 1.0f), 0.0f); //Sets the momentum of the asteroid
-        float speed = Random.Range(2.5f, 10.0f);
+        float speed = Random.Range(SPEED_MIN, SPEED_MAX);
         momentum = direction * speed;
         edge = (int)Random.Range(0.0f, 4.0f);
 
@@ -64,5 +72,11 @@ public class Drift : MonoBehaviour
     private void OnTriggerEnter(Collider other)
     {
         Destroy(this.gameObject);
+    }
+
+    private void OnDestroy()
+    {
+        Debug.Log("Destroy Function - score increase sent.");
+        gameController.GetComponent<GameManager>().AsteroidDead(scaleAmount * baseScore);
     }
 }

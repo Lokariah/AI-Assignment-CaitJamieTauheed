@@ -11,7 +11,7 @@ public class LaserDrift : MonoBehaviour
     float timeAlive = 0.0f;
     float lifeTime = 2.5f;
     float screenRadius = 20.0f;
-
+    
     // Start is called before the first frame update
     void Start()
     {

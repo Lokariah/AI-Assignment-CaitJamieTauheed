@@ -91,6 +91,7 @@ public class ShipController : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
+<<<<<<< Updated upstream
        if (other.tag != "Player") Destroy(this.gameObject);
     }
 
@@ -98,5 +99,37 @@ public class ShipController : MonoBehaviour
     {
         Application.Quit();
         UnityEditor.EditorApplication.isPlaying = false;
+=======
+       if (other.tag != "Player")
+       {
+            isAlive = false;
+            Debug.Log("Ouch. I'm hit!");
+       }
+    }
+
+
+    public void ResetShip()
+    {
+        this.transform.position = new Vector3(0.0f, 0.0f, 15.0f);
+        this.transform.rotation = Quaternion.Euler(-90.0f, -90.0f, 0.0f);
+        momentum = Vector3.zero;
+        shootTimer = 0.0f;
+        isAlive = true;
+    }
+
+    public bool CheckIfAlive()
+    {
+        return isAlive;
+    }
+
+    public Vector3 GetMomentum()
+    {
+        return momentum;
+    }
+
+    public float GetShootTimer()
+    {
+        return shootTimer;
+>>>>>>> Stashed changes
     }
 }

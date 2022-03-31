@@ -123,8 +123,9 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
---- !u!1 &39128306
+--- !u!1 &39128306 stripped
 GameObject:
+<<<<<<< Updated upstream
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -168,6 +169,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   asteroidPrefab: {fileID: 6264938321373868475, guid: 4b4f22583693d7a45b48c9d1100e470d, type: 3}
+=======
+  m_CorrespondingSourceObject: {fileID: 1807667090400797604, guid: fa930871e8bff3a4fa07dabb17a4816c, type: 3}
+  m_PrefabInstance: {fileID: 2669022388579203496}
+  m_PrefabAsset: {fileID: 0}
+>>>>>>> Stashed changes
 --- !u!1 &471807453
 GameObject:
   m_ObjectHideFlags: 0
@@ -185,6 +191,7 @@ GameObject:
   - component: {fileID: 471807462}
   - component: {fileID: 471807461}
   - component: {fileID: 471807460}
+  - component: {fileID: 471807463}
   m_Layer: 0
   m_Name: Ship
   m_TagString: Player
@@ -334,18 +341,18 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_BrainParameters:
-    VectorObservationSize: 1
+    VectorObservationSize: 11
     NumStackedVectorObservations: 1
     m_ActionSpec:
       m_NumContinuousActions: 0
-      BranchSizes: 
-    VectorActionSize: 
+      BranchSizes: 020000000300000002000000
+    VectorActionSize: 020000000300000002000000
     VectorActionDescriptions: []
     VectorActionSpaceType: 0
     hasUpgradedBrainParametersWithActionSpec: 1
   m_Model: {fileID: 0}
   m_InferenceDevice: 2
-  m_BehaviorType: 0
+  m_BehaviorType: 1
   m_BehaviorName: Ship Behaviour
   TeamId: 0
   m_UseChildSensors: 1
@@ -363,6 +370,29 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 375de2aa42867e64e9f9eff4eb5d6054, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+<<<<<<< Updated upstream
+=======
+  agentParameters:
+    maxStep: 0
+  hasUpgradedFromAgentParameters: 1
+  MaxStep: 0
+  gameController: {fileID: 39128306}
+  shipModel: {fileID: 471807453}
+--- !u!114 &471807463
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 471807453}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3a5c9d521e5ef4759a8246a07d52221e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  DecisionPeriod: 5
+  TakeActionsBetweenDecisions: 1
+>>>>>>> Stashed changes
 --- !u!1 &705388902
 GameObject:
   m_ObjectHideFlags: 0
@@ -982,3 +1012,64 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1001 &2669022388579203496
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 1807667090400797604, guid: fa930871e8bff3a4fa07dabb17a4816c, type: 3}
+      propertyPath: m_Name
+      value: Game Controller
+      objectReference: {fileID: 0}
+    - target: {fileID: 2669022388607710557, guid: fa930871e8bff3a4fa07dabb17a4816c, type: 3}
+      propertyPath: shipModel
+      value: 
+      objectReference: {fileID: 471807453}
+    - target: {fileID: 3293480931787743951, guid: fa930871e8bff3a4fa07dabb17a4816c, type: 3}
+      propertyPath: m_RootOrder
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 3293480931787743951, guid: fa930871e8bff3a4fa07dabb17a4816c, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -0.9204319
+      objectReference: {fileID: 0}
+    - target: {fileID: 3293480931787743951, guid: fa930871e8bff3a4fa07dabb17a4816c, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -5.912066
+      objectReference: {fileID: 0}
+    - target: {fileID: 3293480931787743951, guid: fa930871e8bff3a4fa07dabb17a4816c, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 3.0909579
+      objectReference: {fileID: 0}
+    - target: {fileID: 3293480931787743951, guid: fa930871e8bff3a4fa07dabb17a4816c, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3293480931787743951, guid: fa930871e8bff3a4fa07dabb17a4816c, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3293480931787743951, guid: fa930871e8bff3a4fa07dabb17a4816c, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3293480931787743951, guid: fa930871e8bff3a4fa07dabb17a4816c, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3293480931787743951, guid: fa930871e8bff3a4fa07dabb17a4816c, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3293480931787743951, guid: fa930871e8bff3a4fa07dabb17a4816c, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3293480931787743951, guid: fa930871e8bff3a4fa07dabb17a4816c, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: fa930871e8bff3a4fa07dabb17a4816c, type: 3}
