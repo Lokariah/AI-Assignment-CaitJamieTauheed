@@ -182,6 +182,12 @@ GameObject:
   - component: {fileID: 471807454}
   - component: {fileID: 471807458}
   - component: {fileID: 471807459}
+<<<<<<< Updated upstream
+=======
+  - component: {fileID: 471807462}
+  - component: {fileID: 471807460}
+  - component: {fileID: 471807461}
+>>>>>>> Stashed changes
   m_Layer: 0
   m_Name: Ship
   m_TagString: Player
