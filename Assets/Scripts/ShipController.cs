@@ -18,12 +18,14 @@ public class ShipController : MonoBehaviour
     float screenRadius = 20.0f; //The distance from 0 to the edge of the screen.
     // float leniencyEdgeValue = 0.1f;
 
+    bool isAlive = true;
 
 
     // Start is called before the first frame update
     void Start()
     {
         gameObject.tag = "Player";
+        isAlive = true;
     }
 
     // Update is called once per frame
@@ -91,15 +93,6 @@ public class ShipController : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-<<<<<<< Updated upstream
-       if (other.tag != "Player") Destroy(this.gameObject);
-    }
-
-    private void OnDestroy()
-    {
-        Application.Quit();
-        UnityEditor.EditorApplication.isPlaying = false;
-=======
        if (other.tag != "Player")
        {
             isAlive = false;
@@ -130,6 +123,5 @@ public class ShipController : MonoBehaviour
     public float GetShootTimer()
     {
         return shootTimer;
->>>>>>> Stashed changes
     }
 }

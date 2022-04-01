@@ -1,33 +1,30 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-<<<<<<< Updated upstream
-=======
 using Unity.MLAgents;
 using Unity.MLAgents.Sensors;
 using Unity.MLAgents.Actuators;
->>>>>>> Stashed changes
 
-public class AIInput : MonoBehaviour
+public class AIInput : Agent
 {
-<<<<<<< Updated upstream
-=======
+
     public GameObject gameController;
     public GameObject shipModel;
 
->>>>>>> Stashed changes
     // Start is called before the first frame update
     void Start()
     {
         
     }
 
-    // Update is called once per frame
-    void Update()
+    public override void OnEpisodeBegin()
     {
-<<<<<<< Updated upstream
-        
-=======
+        base.OnEpisodeBegin();
+    }
+
+    // Update is called once per frame
+    public override void CollectObservations(VectorSensor sensor)
+    {
         sensor.AddObservation(this.transform.position);
         sensor.AddObservation(this.transform.rotation);
         sensor.AddObservation(shipModel.GetComponent<ShipController>().GetMomentum());
@@ -94,6 +91,5 @@ public class AIInput : MonoBehaviour
             EndEpisode();
             Debug.Log("Episode has been ended.");
         }
->>>>>>> Stashed changes
     }
 }
