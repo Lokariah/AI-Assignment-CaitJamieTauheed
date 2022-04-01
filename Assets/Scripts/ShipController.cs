@@ -104,7 +104,7 @@ public class ShipController : MonoBehaviour
     public void ResetShip()
     {
         this.transform.position = new Vector3(0.0f, 0.0f, 15.0f);
-        this.transform.rotation = Quaternion.Euler(-90.0f, -90.0f, 0.0f);
+        this.transform.rotation = Quaternion.Euler(-90.0f, 0.0f, 0.0f);
         momentum = Vector3.zero;
         shootTimer = 0.0f;
         isAlive = true;
