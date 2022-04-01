@@ -1,0 +1,47 @@
+{
+    "AsteroidsPPO": {
+        "checkpoints": [
+            {
+                "steps": 49998,
+                "file_path": "results\\secondAsteroidsRun\\AsteroidsPPO\\AsteroidsPPO-49998.onnx",
+                "reward": 12140.521275111607,
+                "creation_time": 1648850080.1682198,
+                "auxillary_file_paths": [
+                    "results\\secondAsteroidsRun\\AsteroidsPPO\\AsteroidsPPO-49998.pt"
+                ]
+            },
+            {
+                "steps": 99890,
+                "file_path": "results\\secondAsteroidsRun\\AsteroidsPPO\\AsteroidsPPO-99890.onnx",
+                "reward": 12052.126627604166,
+                "creation_time": 1648850636.7730439,
+                "auxillary_file_paths": [
+                    "results\\secondAsteroidsRun\\AsteroidsPPO\\AsteroidsPPO-99890.pt"
+                ]
+            },
+            {
+                "steps": 120004,
+                "file_path": "results\\secondAsteroidsRun\\AsteroidsPPO\\AsteroidsPPO-120004.onnx",
+                "reward": 9856.207983398437,
+                "creation_time": 1648851248.1428018,
+                "auxillary_file_paths": [
+                    "results\\secondAsteroidsRun\\AsteroidsPPO\\AsteroidsPPO-120004.pt"
+                ]
+            }
+        ],
+        "final_checkpoint": {
+            "steps": 120004,
+            "file_path": "results\\secondAsteroidsRun\\AsteroidsPPO.onnx",
+            "reward": 9856.207983398437,
+            "creation_time": 1648851248.1428018,
+            "auxillary_file_paths": [
+                "results\\secondAsteroidsRun\\AsteroidsPPO\\AsteroidsPPO-120004.pt"
+            ]
+        }
+    },
+    "metadata": {
+        "stats_format_version": "0.3.0",
+        "mlagents_version": "0.28.0",
+        "torch_version": "1.7.1+cu110"
+    }
+}
