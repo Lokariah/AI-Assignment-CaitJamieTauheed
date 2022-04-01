@@ -125,55 +125,9 @@ NavMeshSettings:
   m_NavMeshData: {fileID: 0}
 --- !u!1 &39128306 stripped
 GameObject:
-<<<<<<< Updated upstream
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 39128307}
-  - component: {fileID: 39128308}
-  m_Layer: 0
-  m_Name: Asteroid Spawner
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &39128307
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 39128306}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0.9204319, y: -5.912066, z: 3.0909579}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 0}
-  m_RootOrder: 6
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &39128308
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 39128306}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: bc50f7d543fd2f14d913b9fec618f911, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  asteroidPrefab: {fileID: 6264938321373868475, guid: 4b4f22583693d7a45b48c9d1100e470d, type: 3}
-=======
   m_CorrespondingSourceObject: {fileID: 1807667090400797604, guid: fa930871e8bff3a4fa07dabb17a4816c, type: 3}
   m_PrefabInstance: {fileID: 2669022388579203496}
   m_PrefabAsset: {fileID: 0}
->>>>>>> Stashed changes
 --- !u!1 &471807453
 GameObject:
   m_ObjectHideFlags: 0
@@ -370,8 +324,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 375de2aa42867e64e9f9eff4eb5d6054, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-<<<<<<< Updated upstream
-=======
   agentParameters:
     maxStep: 0
   hasUpgradedFromAgentParameters: 1
@@ -392,7 +344,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   DecisionPeriod: 5
   TakeActionsBetweenDecisions: 1
->>>>>>> Stashed changes
 --- !u!1 &705388902
 GameObject:
   m_ObjectHideFlags: 0
@@ -1022,6 +973,10 @@ PrefabInstance:
     - target: {fileID: 1807667090400797604, guid: fa930871e8bff3a4fa07dabb17a4816c, type: 3}
       propertyPath: m_Name
       value: Game Controller
+      objectReference: {fileID: 0}
+    - target: {fileID: 1807667090400797604, guid: fa930871e8bff3a4fa07dabb17a4816c, type: 3}
+      propertyPath: m_TagString
+      value: GameController
       objectReference: {fileID: 0}
     - target: {fileID: 2669022388607710557, guid: fa930871e8bff3a4fa07dabb17a4816c, type: 3}
       propertyPath: shipModel

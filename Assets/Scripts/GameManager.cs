@@ -7,9 +7,10 @@ public class GameManager : MonoBehaviour
 {
     public GameObject asteroidSpawner;
     public GameObject shipModel;
-    int score = 0;
+    static int score = 0;
     int scoreThreshold = 10000;
     float sessionTime = 0.0f;
+    bool resetProcess = false;
     // Start is called before the first frame update
     void Start()
     {
@@ -26,11 +27,13 @@ public class GameManager : MonoBehaviour
 
     public  void ResetGame()
     {
+        resetProcess = true;
         shipModel.GetComponent<ShipController>().ResetShip();
         asteroidSpawner.GetComponent<AsteroidSpawner>().ResetAsteroids();
-        score = 0;
         Debug.Log("ResetGame Function. Score is " + score);
+        score = 0;
         sessionTime = 0.0f;
+        resetProcess = false;
     }
 
     public bool ShipIsStillAlive()
@@ -40,9 +43,9 @@ public class GameManager : MonoBehaviour
 
     public void AsteroidDead(float scoreAmount)
     {
-        Debug.Log("A:   AsteroidDead Function - score increase recieved. Score is " + score);
-        score += (int)Math.Truncate(scoreAmount);
-        Debug.Log("B:   AsteroidDead Function - score increase recieved. Score is " + score);
+        //Debug.Log("A:   AsteroidDead Function - score increase recieved. Score is " + score);
+        if(!resetProcess) score += (int)Math.Truncate(scoreAmount);
+        //Debug.Log("B:   AsteroidDead Function - score increase recieved. Score is " + score);
     }
 
     public int GetScore()

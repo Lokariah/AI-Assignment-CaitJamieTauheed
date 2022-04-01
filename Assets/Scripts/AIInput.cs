@@ -19,7 +19,7 @@ public class AIInput : Agent
 
     public override void OnEpisodeBegin()
     {
-        base.OnEpisodeBegin();
+        gameController.GetComponent<GameManager>().ResetGame();
     }
 
     // Update is called once per frame

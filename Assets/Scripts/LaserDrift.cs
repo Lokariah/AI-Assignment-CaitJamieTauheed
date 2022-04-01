@@ -16,7 +16,6 @@ public class LaserDrift : MonoBehaviour
     void Start()
     {
         this.transform.Rotate(Vector3.left, -90.0f);
-        gameObject.tag = "Player";
         float speed = 15.0f;
         momentum = this.transform.up * speed;
     }
@@ -49,7 +48,7 @@ public class LaserDrift : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        if (other.tag != "Player")
+        if (other.tag != "Player" && other.tag != "Laser")
         {
             Destroy(other.gameObject);
             Destroy(this.gameObject);

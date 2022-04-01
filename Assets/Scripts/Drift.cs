@@ -71,7 +71,10 @@ public class Drift : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        Destroy(this.gameObject);
+        if (other.tag != "Asteroid")
+        {
+            Destroy(this.gameObject);
+        }
     }
 
     private void OnDestroy()

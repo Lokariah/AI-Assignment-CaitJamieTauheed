@@ -93,7 +93,7 @@ public class ShipController : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-       if (other.tag != "Player")
+       if (other.tag != "Player" && other.tag != "Laser")
        {
             isAlive = false;
             Debug.Log("Ouch. I'm hit!");

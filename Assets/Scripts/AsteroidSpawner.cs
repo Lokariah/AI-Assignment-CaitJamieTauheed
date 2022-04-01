@@ -23,4 +23,31 @@ public class AsteroidSpawner : MonoBehaviour
         if (timeMod < previousTimeMod && time >= 3.90f) Instantiate(asteroidPrefab, new Vector3(0.0f, 0.0f, 15.0f), Quaternion.identity);
         previousTimeMod = timeMod;
     }
+
+    public void ResetAsteroids()
+    {
+        time = 0.0f;
+        GameObject[] asteroidArray = GameObject.FindGameObjectsWithTag("Asteroid");
+        if (asteroidArray.Length > 0)
+        {
+            for (int i = 0; i < asteroidArray.Length; i++)
+            {
+                Destroy(asteroidArray[i]);
+            }
+        }
+
+        GameObject[] laserArray = GameObject.FindGameObjectsWithTag("Laser");
+        if (laserArray.Length > 0)
+        {
+            for (int i = 0; i < laserArray.Length; i++)
+            {
+                Destroy(laserArray[i]);
+            }
+        }
+    }
+
+    public GameObject[] GetAsteroids()
+    {
+        return GameObject.FindGameObjectsWithTag("Asteroid");
+    }
 }
