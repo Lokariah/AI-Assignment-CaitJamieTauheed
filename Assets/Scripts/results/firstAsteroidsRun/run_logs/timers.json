@@ -1,0 +1,42 @@
+{
+    "name": "root",
+    "metadata": {
+        "timer_format_version": "0.1.0",
+        "start_time_seconds": "1648849313",
+        "python_version": "3.9.7 (default, Sep 16 2021, 16:59:28) [MSC v.1916 64 bit (AMD64)]",
+        "command_line_arguments": "C:\\Users\\jamie\\anaconda3\\Scripts\\mlagents-learn AsteroidsPPO.yaml --run-id=firstAsteroidsRun",
+        "mlagents_version": "0.28.0",
+        "mlagents_envs_version": "0.28.0",
+        "communication_protocol_version": "1.5.0",
+        "pytorch_version": "1.7.1+cu110",
+        "numpy_version": "1.20.3",
+        "end_time_seconds": "1648849347"
+    },
+    "total": 34.1802229,
+    "count": 1,
+    "self": 0.00916369999999489,
+    "children": {
+        "run_training.setup": {
+            "total": 0.15848740000000006,
+            "count": 1,
+            "self": 0.15848740000000006
+        },
+        "TrainerController.start_learning": {
+            "total": 34.0125718,
+            "count": 1,
+            "self": 0.00017420000001067137,
+            "children": {
+                "TrainerController._reset_env": {
+                    "total": 34.0123853,
+                    "count": 1,
+                    "self": 34.0123853
+                },
+                "TrainerController._save_models": {
+                    "total": 1.2299999994525024e-05,
+                    "count": 1,
+                    "self": 1.2299999994525024e-05
+                }
+            }
+        }
+    }
+}
