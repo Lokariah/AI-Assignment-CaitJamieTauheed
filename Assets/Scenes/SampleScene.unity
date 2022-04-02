@@ -305,7 +305,7 @@ MonoBehaviour:
     VectorActionDescriptions: []
     VectorActionSpaceType: 0
     hasUpgradedBrainParametersWithActionSpec: 1
-  m_Model: {fileID: 0}
+  m_Model: {fileID: 5022602860645237092, guid: 84bbe7aeac2b8674e838b194f4d9955f, type: 3}
   m_InferenceDevice: 2
   m_BehaviorType: 0
   m_BehaviorName: AsteroidsPPO
